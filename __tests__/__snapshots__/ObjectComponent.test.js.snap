@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing object component Should create a circle 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#252450",
+      "borderRadius": 35,
+      "height": 70,
+      "left": 107,
+      "position": "absolute",
+      "top": 250,
+      "width": 70,
+      "zIndex": 9999,
+    }
+  }
+>
+  <View
+    style={null}
+  />
+</View>
+`;
+
+exports[`Testing object component Should create a square 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "height": 131,
+      "left": 101.5,
+      "position": "absolute",
+      "top": 396.5,
+      "width": 131,
+      "zIndex": 9999,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "height": 131,
+        "width": 131,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://static.colourlovers.com/images/patterns/1978/1978162.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": 131,
+            "width": 131,
+          },
+          Object {
+            "borderBottomWidth": undefined,
+            "borderLeftWidth": undefined,
+            "borderRightWidth": undefined,
+            "height": 131,
+            "width": 131,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Testing object component Should create a triangle 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderBottomColor": "#6BA0D7",
+      "borderBottomWidth": 127,
+      "borderLeftColor": "transparent",
+      "borderLeftWidth": 63.5,
+      "borderRightColor": "transparent",
+      "borderRightWidth": 63.5,
+      "borderStyle": "solid",
+      "height": 0,
+      "left": 164,
+      "position": "absolute",
+      "top": 435,
+      "width": 0,
+      "zIndex": 9999,
+    }
+  }
+>
+  <View
+    style={null}
+  />
+</View>
+`;

@@ -6,6 +6,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import generateRandomColorOrImage from '../helpers/generateRandomColorOrImage';
+import timeout from '../helpers/timeout';
 
 let taps = 0;
 
@@ -15,23 +16,22 @@ export default ({styleFunction, paramStyles}) => {
   );
   const [uri, setUri] = useState(paramStyles.uri);
   const zIndex = 9999;
-  const clickOnObject = () => {
+  const clickOnObject = async () => {
     taps++;
-    setTimeout(async () => {
-      if (taps === 1) {
+    await timeout(300);
+    if (taps === 1) {
+      taps = 0;
+    } else if (taps === 2) {
+      if (color && !uri) {
         taps = 0;
-      } else if (taps === 2) {
-        if (color && !uri) {
-          taps = 0;
-          setColor(
-            (await generateRandomColorOrImage({circle: true})).backgroundColor,
-          );
-        } else {
-          taps = 0;
-          setUri((await generateRandomColorOrImage({square: true})).uri);
-        }
+        setColor(
+          (await generateRandomColorOrImage({circle: true})).backgroundColor,
+        );
+      } else {
+        taps = 0;
+        setUri((await generateRandomColorOrImage({square: true})).uri);
       }
-    }, 300);
+    }
   };
 
   if (paramStyles.borderStyle && paramStyles.uri) {
@@ -97,7 +97,6 @@ export default ({styleFunction, paramStyles}) => {
       </TouchableHighlight>
     );
   }
-
   return (
     <TouchableHighlight
       onPress={clickOnObject}

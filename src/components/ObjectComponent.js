@@ -21,9 +21,8 @@ export default ({styleFunction, paramStyles}) => {
       if (taps === 1) {
         taps = 0;
       } else if (taps === 2) {
-        if (color) {
+        if (color && !uri) {
           taps = 0;
-          console.log('s');
           setColor(
             (await generateRandomColorOrImage({circle: true})).backgroundColor,
           );
@@ -37,10 +36,10 @@ export default ({styleFunction, paramStyles}) => {
 
   if (paramStyles.borderStyle && paramStyles.uri) {
     const flexDirection = 'row';
-
     return (
       <TouchableHighlight
         onPress={clickOnObject}
+        activeOpacity={1}
         style={{
           ...styleFunction({
             ...paramStyles,
@@ -55,14 +54,14 @@ export default ({styleFunction, paramStyles}) => {
           source={{uri}}
           key={Date.now()}
           imageStyle={{
-            borderRadius: paramStyles.borderRadius,
             borderLeftWidth: paramStyles.borderLeftWidth,
             borderRightWidth: paramStyles.borderRightWidth,
             borderBottomWidth: paramStyles.borderBottomWidth,
+          }}
+          style={{
             width: paramStyles.width,
             height: paramStyles.height,
-          }}
-          style={{width: paramStyles.width, height: paramStyles.height}}>
+          }}>
           <View style={{flexDirection}}>
             <View
               style={styles.triangleFirstView(paramStyles.borderRightWidth)}
